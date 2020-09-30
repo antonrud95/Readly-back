@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/recently-reads",
+      "handler": "recently-read.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recently-reads/count",
+      "handler": "recently-read.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recently-reads/:id",
+      "handler": "recently-read.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/recently-reads",
+      "handler": "recently-read.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/recently-reads/:id",
+      "handler": "recently-read.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/recently-reads/:id",
+      "handler": "recently-read.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

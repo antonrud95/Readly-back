@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favourites",
+  "info": {
+    "name": "favourites"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "richtext"
+    }
+  }
+}

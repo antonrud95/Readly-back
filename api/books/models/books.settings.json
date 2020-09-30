@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "books"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "richtext"
+    },
+    "author": {
+      "via": "books",
+      "model": "books"
+    },
+    "books": {
+      "via": "author",
+      "collection": "books"
+    }
+  }
+}
